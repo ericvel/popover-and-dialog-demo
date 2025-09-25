@@ -15,28 +15,28 @@
         <a class="navlink" href="/">Page A</a>
         <a class="navlink" href="/">Page B</a>
 
-        <button class="user-button" popovertarget="user-menu">
+        <button class="user-button">
           <img src="/src/user_icon.jpg" class="user-icon" />
         </button>
-
-        <div popover id="user-menu" class="user-menu">
-          <div class="name-container">
-            <p class="name">Eric Veliyulin</p>
-            <span class="email">eric.vel@outlook.com</span>
-          </div>
-          <a class="menu-item" href="/">Profile</a>
-          <a class="menu-item" href="/">Settings</a>
-          <button class="menu-item">Sign out</button>
-        </div>
       </nav>
+      
+      <div class="user-menu">
+        <div class="name-container">
+          <p class="name">Eric Veliyulin</p>
+          <span class="email">eric.vel@outlook.com</span>
+        </div>
+        <a class="menu-item" href="/">Profile</a>
+        <a class="menu-item" href="/">Settings</a>
+        <button class="menu-item">Sign out</button>
+      </div>
     </header>
 
     <main>
       <h1>Popover API + Dialog demo</h1>
-      <button class="dialog-button" id="show-dialog-btn">Show dialog</button>
-      <dialog closedby="any">
+      <button class="dialog-button">Show dialog</button>
+      <dialog>
         <p>This is a dialog</p>
-        <button id="close-dialog-btn">❌</button>
+        <button>❌</button>
       </dialog>
     </main>
 

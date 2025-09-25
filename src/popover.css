@@ -4,29 +4,4 @@
   width: 12rem;
   border-radius: 0.5rem;
   overflow: hidden;
-
-  margin: 0;
-  padding: 0;
-  inset: auto;
-  position: absolute;
-
-  margin-top: 0.5rem;
-
-  top: anchor(bottom);
-  right: anchor(right);
-  position-try-fallbacks: flip-inline;
-
-  opacity: 0;
-  transition-property: display, overlay, opacity;
-  transition-duration: 0.2s;
-  transition-behavior: allow-discrete;
-}
-
-.user-menu:popover-open {
-  display: grid;
-  opacity: 1;
-
-  @starting-style {
-    opacity: 0;
-  }
 }
