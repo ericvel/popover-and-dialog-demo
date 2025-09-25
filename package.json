@@ -1,0 +1,14 @@
+{
+  "name": "popover-and-dialog-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.20"
+  }
+}

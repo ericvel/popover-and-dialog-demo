@@ -1,0 +1,69 @@
+.user-button {
+  width: 4rem;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+
+  &:hover {
+    outline: 2px solid white;
+  }
+}
+
+.user-menu {
+  background-color: #3a3a69;
+  color: white;
+  width: 12rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+  inset: auto;
+  position: absolute;
+
+  margin-top: 0.5rem;
+
+  top: anchor(bottom);
+  right: anchor(right);
+  position-try-fallbacks: flip-inline;
+
+  opacity: 0;
+  transition-property: display, overlay, opacity;
+  transition-duration: 0.2s;
+  transition-behavior: allow-discrete;
+}
+
+.user-menu:popover-open {
+  display: grid;
+  opacity: 1;
+
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.user-icon {
+  border-radius: 9999px;
+}
+
+.name-container {
+  border-bottom: 1px solid gray;
+  padding: 1rem;
+
+  & .name {
+    font-weight: 600;
+  }
+
+  & .email {
+    font-size: 0.875rem;
+  }
+}
+
+.menu-item {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+
+  &:hover {
+    background-color: #4a4a92;
+  }
+}

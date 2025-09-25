@@ -1,0 +1,40 @@
+dialog {
+  color: black;
+  padding: 3rem;
+  gap: 1rem;
+  border-radius: 0.5rem;
+
+  transition-property: overlay, display, opacity, scale;
+  transition-duration: 0.3s;
+  transition-behavior: allow-discrete;
+  opacity: 0;
+  scale: 0.95;
+}
+
+dialog:open {
+  display: flex;
+  opacity: 1;
+  scale: 1;
+
+  @starting-style {
+    opacity: 0;
+    scale: 0.95;
+  }
+}
+
+dialog::backdrop {
+  background-image: linear-gradient(45deg, dodgerblue, red);
+  opacity: 0;
+
+  transition-property: overlay, opacity, display;
+  transition-duration: 0.3s;
+  transition-behavior: allow-discrete;
+}
+
+dialog:open::backdrop {
+  opacity: 0.85;
+
+  @starting-style {
+    opacity: 0;
+  }
+}
