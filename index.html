@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Popover API + Dialog demo</title>
-    <link rel="stylesheet" href="/src/index.css" />
+    <title>Popover API demo</title>
     <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <script type="module" src="/src/main.js"></script>
   </head>
 
   <body>
@@ -14,13 +15,12 @@
         <a class="navlink" href="/">Home</a>
         <a class="navlink" href="/">Page A</a>
         <a class="navlink" href="/">Page B</a>
-
-        <button class="user-button">
+        <button class="user-button" popovertarget="user-menu">
           <img src="/src/user_icon.jpg" class="user-icon" />
         </button>
       </nav>
-      
-      <div class="user-menu">
+
+      <div popover id="user-menu" class="user-menu">
         <div class="name-container">
           <p class="name">Eric Veliyulin</p>
           <span class="email">eric.vel@outlook.com</span>
@@ -32,26 +32,7 @@
     </header>
 
     <main>
-      <h1>Popover API + Dialog demo</h1>
-      <button class="dialog-button">Show dialog</button>
-      <dialog>
-        <p>This is a dialog</p>
-        <button>❌</button>
-      </dialog>
+      <h1>Popover API demo</h1>
     </main>
-
-    <script>
-      const dialog = document.querySelector("dialog");
-      const showButton = document.querySelector("#show-dialog-btn");
-      const closeButton = document.querySelector("#close-dialog-btn");
-
-      showButton.addEventListener("click", () => {
-        dialog.showModal();
-      });
-
-      closeButton.addEventListener("click", () => {
-        dialog.close();
-      });
-    </script>
   </body>
 </html>

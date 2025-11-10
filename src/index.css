@@ -1,6 +1,5 @@
 @import "./reset.css" layer(reset);
 @import "./dialog.css";
-@import "./popover.css";
 
 :root {
   font-family: ui-sans-serif, system-ui, sans-serif;
@@ -19,7 +18,7 @@ nav {
   align-items: center;
   gap: 2rem;
   height: 6rem;
-  justify-content: end;
+  justify-content: center;
   padding: 0 5rem;
   max-width: 100vw;
 }
@@ -37,6 +36,7 @@ nav {
   width: 4rem;
   border-radius: 9999px;
   border: 2px solid transparent;
+  flex: none;
 
   &:hover {
     outline: 2px solid white;
@@ -45,6 +45,13 @@ nav {
 
 .user-icon {
   border-radius: 9999px;
+}
+
+.user-menu {
+  background-color: #3a3a69;
+  color: white;
+  width: 12rem;
+  border-radius: 0.5rem;
 }
 
 .name-container {

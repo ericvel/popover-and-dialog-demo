@@ -4,3 +4,8 @@ dialog {
   gap: 1rem;
   border-radius: 0.5rem;
 }
+
+dialog::backdrop {
+  background: linear-gradient(90deg, #e66465, #9198e5);
+  opacity: 0.4;
+}
