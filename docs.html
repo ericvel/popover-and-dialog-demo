@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation - Popover API Demo</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a class="navlink" href="/">Home</a>
+        <a class="navlink" href="/">Articles</a>
+        <a class="navlink" href="/docs.html">Docs</a>
+        <button class="user-button" popovertarget="user-menu">
+          <img src="/src/user_icon.jpg" class="user-icon" />
+        </button>
+      </nav>
+
+      <div popover id="user-menu" class="user-menu">
+        <div class="name-container">
+          <p class="name">Eric Veliyulin</p>
+          <span class="email">eric.vel@outlook.com</span>
+        </div>
+        <a class="menu-item" href="/">Profile</a>
+        <a class="menu-item" href="/">Settings</a>
+        <button class="menu-item">Sign out</button>
+      </div>
+    </header>
+
+    <main>
+      <h1>Documentation</h1>
+        
+     
+    </main>
+  </body>
+</html>
