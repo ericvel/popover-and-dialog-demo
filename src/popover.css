@@ -11,18 +11,22 @@
   margin-top: 8px;
   position-try-fallbacks: --menu-fallback;
 
-  transition: opacity, display;
-  transition-duration: 0.2s;
+  transition: opacity, scale, display;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.15s;
   transition-behavior: allow-discrete;
   opacity: 0;
+  scale: 0.95;
 }
 
 .user-menu:popover-open {
   display: flex;
   opacity: 1;
+  scale: 1;
 
   @starting-style {
     opacity: 0;
+    scale: 0.95;
   }
 }
 

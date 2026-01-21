@@ -18,7 +18,7 @@ nav {
   align-items: center;
   gap: 2rem;
   height: 6rem;
-  justify-content: center;
+  justify-content: end;
   padding: 0 5rem;
   max-width: 100vw;
 }
@@ -87,7 +87,7 @@ h1 {
   margin-bottom: 3rem;
 }
 
-.dialog-button {
+.button {
   padding: 0.5rem 1rem;
   background-color: blue;
   border-radius: 9999px;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,8 +13,8 @@
     <header>
       <nav>
         <a class="navlink" href="/">Home</a>
-        <a class="navlink" href="/">Page A</a>
-        <a class="navlink" href="/">Page B</a>
+        <a class="navlink" href="/">Articles</a>
+        <a class="navlink" href="/">Docs</a>
         <button class="user-button" popovertarget="user-menu">
           <img src="/src/user_icon.jpg" class="user-icon" />
         </button>
@@ -32,7 +32,48 @@
     </header>
 
     <main>
-      <h1>Popover API demo</h1>
+      <h1><code>&lt;dialog&gt;</code> demo</h1>
+
+      <button class="button" id="show-dialog-btn">Show dialog</button>
+
+      <dialog closedby="any">
+        <h2>This is a dialog</h2>
+        <p>Congrats, you successfully opened the dialog!</p>
+        <div class="dialog-footer">
+          <button class="button" id="close-dialog-btn">Close</button>
+        </div>
+      </dialog>
     </main>
   </body>
+
+  <script>
+    const dialog = document.querySelector("dialog");
+    const showButton = document.querySelector("#show-dialog-btn");
+    const closeButton = document.querySelector("#close-dialog-btn");
+
+    showButton.addEventListener("click", () => {
+      dialog.showModal();
+      updateScrollbarStyles(true);
+    });
+
+    closeButton.addEventListener("click", () => {
+      dialog.close();
+    });
+
+    dialog.addEventListener("close", () => {
+      updateScrollbarStyles(false);
+    });
+
+    // Prevent page scroll when a dialog is open
+    const updateScrollbarStyles = (isOpen) => {
+      const hasOverflow =
+        document.documentElement.scrollHeight >
+        document.documentElement.clientHeight;
+
+      if (!hasOverflow) return;
+
+      document.documentElement.style.overflow = isOpen ? "hidden" : "";
+      document.documentElement.style.scrollbarGutter = isOpen ? "stable" : "";
+    };
+  </script>
 </html>

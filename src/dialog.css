@@ -1,11 +1,66 @@
 dialog {
-  color: black;
-  padding: 3rem;
-  gap: 1rem;
-  border-radius: 0.5rem;
+  & h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  & p {
+    margin-bottom: 32px;
+  }
+
+  & .dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  padding: 24px;
+  border-radius: 16px;
+  background: #1e293b;
+  color: #e2e8f0;
+  box-shadow: 0 1.25rem 3.125rem rgb(0 0 0 / 0.5);
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #3c4d68;
+  opacity: 0;
+  transform: scale(0.95);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    overlay 0.2s allow-discrete,
+    display 0.2s allow-discrete;
+}
+
+dialog[open] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@starting-style {
+  dialog[open] {
+    opacity: 0;
+    transform: scale(0.95);
+  }
 }
 
 dialog::backdrop {
-  background: linear-gradient(90deg, #e66465, #9198e5);
-  opacity: 0.4;
+  background-color: rgb(2 6 23 / 0);
+  backdrop-filter: blur(0px);
+  transition:
+    background-color 0.2s ease,
+    backdrop-filter 0.2s ease,
+    overlay 0.2s allow-discrete,
+    display 0.2s allow-discrete;
+}
+
+dialog[open]::backdrop {
+  background-color: rgb(2 6 23 / 0.7);
+  backdrop-filter: blur(4px);
+}
+
+@starting-style {
+  dialog[open]::backdrop {
+    background-color: rgb(2 6 23 / 0);
+    backdrop-filter: blur(0px);
+  }
 }
