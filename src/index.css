@@ -84,6 +84,12 @@ main {
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
+}
+
+.subheading {
+  font-size: 1.625rem;
+  font-weight: 500;
+  color: rgb(210, 210, 210);
   margin-bottom: 3rem;
 }
 
