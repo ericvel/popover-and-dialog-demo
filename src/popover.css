@@ -1,41 +1,4 @@
 .user-menu {
-  position: absolute;
-  inset: auto;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-
-  position-anchor: --menu-anchor;
-  top: anchor(bottom);
-  left: anchor(left);
-  margin-top: 8px;
-  position-try-fallbacks: --menu-fallback;
-
-  transition: opacity, scale, display;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.15s;
-  transition-behavior: allow-discrete;
-  opacity: 0;
-  scale: 0.95;
-}
-
-.user-menu:popover-open {
   display: flex;
-  opacity: 1;
-  scale: 1;
-
-  @starting-style {
-    opacity: 0;
-    scale: 0.95;
-  }
-}
-
-.user-button {
-  anchor-name: --menu-anchor;
-}
-
-@position-try --menu-fallback {
-  inset: auto;
-  top: anchor(bottom);
-  right: anchor(right);
+  flex-direction: column;
 }

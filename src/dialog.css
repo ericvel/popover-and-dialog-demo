@@ -22,45 +22,4 @@ dialog {
   max-width: 400px;
   width: 100%;
   border: 1px solid #3c4d68;
-  opacity: 0;
-  transform: scale(0.95);
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease,
-    overlay 0.2s allow-discrete,
-    display 0.2s allow-discrete;
-}
-
-dialog[open] {
-  opacity: 1;
-  transform: scale(1);
-}
-
-@starting-style {
-  dialog[open] {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-}
-
-dialog::backdrop {
-  background-color: rgb(2 6 23 / 0);
-  backdrop-filter: blur(0px);
-  transition:
-    background-color 0.2s ease,
-    backdrop-filter 0.2s ease,
-    overlay 0.2s allow-discrete,
-    display 0.2s allow-discrete;
-}
-
-dialog[open]::backdrop {
-  background-color: rgb(2 6 23 / 0.7);
-  backdrop-filter: blur(4px);
-}
-
-@starting-style {
-  dialog[open]::backdrop {
-    background-color: rgb(2 6 23 / 0);
-    backdrop-filter: blur(0px);
-  }
 }

@@ -15,12 +15,12 @@
         <a class="navlink" href="/">Home</a>
         <a class="navlink" href="/">Articles</a>
         <a class="navlink" href="/">Docs</a>
-        <button class="user-button" popovertarget="user-menu">
+        <button class="user-button">
           <img src="/src/user_icon.jpg" class="user-icon" />
         </button>
       </nav>
 
-      <div popover id="user-menu" class="user-menu">
+      <!-- <div class="user-menu">
         <div class="name-container">
           <p class="name">Eric Veliyulin</p>
           <span class="email">eric.vel@outlook.com</span>
@@ -28,53 +28,16 @@
         <a class="menu-item" href="/">Profile</a>
         <a class="menu-item" href="/">Settings</a>
         <button class="menu-item">Sign out</button>
-      </div>
+      </div> -->
     </header>
 
     <main>
       <h1>Popover API and <code>&lt;dialog&gt;</code> demo</h1>
       <p class="subheading">The New Frontend Toolkit</p>
 
-      <button class="button" id="show-dialog-btn">Show dialog</button>
-
-      <dialog closedby="any">
-        <h2>This is a dialog</h2>
-        <p>Congrats, you successfully opened the dialog!</p>
-        <div class="dialog-footer">
-          <button class="button" id="close-dialog-btn">Close</button>
-        </div>
-      </dialog>
+      <!-- <button class="button">Show dialog</button> -->
     </main>
   </body>
 
-  <script>
-    const dialog = document.querySelector("dialog");
-    const showButton = document.querySelector("#show-dialog-btn");
-    const closeButton = document.querySelector("#close-dialog-btn");
-
-    showButton.addEventListener("click", () => {
-      dialog.showModal();
-      updateScrollbarStyles(true);
-    });
-
-    closeButton.addEventListener("click", () => {
-      dialog.close();
-    });
-
-    dialog.addEventListener("close", () => {
-      updateScrollbarStyles(false);
-    });
-
-    // Prevent page scroll when a dialog is open
-    const updateScrollbarStyles = (isOpen) => {
-      const hasOverflow =
-        document.documentElement.scrollHeight >
-        document.documentElement.clientHeight;
-
-      if (!hasOverflow) return;
-
-      document.documentElement.style.overflow = isOpen ? "hidden" : "";
-      document.documentElement.style.scrollbarGutter = isOpen ? "stable" : "";
-    };
-  </script>
+  <script></script>
 </html>
