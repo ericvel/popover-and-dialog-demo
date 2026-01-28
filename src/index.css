@@ -104,3 +104,7 @@ h1 {
     background-color: darkblue;
   }
 }
+
+dialog {
+  color: initial;
+}
