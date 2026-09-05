@@ -1,7 +1,7 @@
 # Popover API and `<dialog>` demo
 
 Source code for my talk at NDC London 2026 👨🏻‍🏫 <br/>
-[**The New Frontend Toolkit: Popover API, Dialog, and Next-Gen CSS**](https://ndclondon.com/agenda/the-new-frontend-toolkit-popover-api-dialog-and-next-gen-css-0vq5/0svlcd5xmx7)
+[**The New Frontend Toolkit: Popover API, Dialog, and Next-Gen CSS**](https://www.youtube.com/watch?v=rjMwM7--9cA)
 
 ## Setup
 
